@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background: #ffffff;
+}
+
+
+
+/* header CSS */
+header {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    background: url(images/paresan.png)no-repeat;
+    background-size: cover;
+    border-image: fill 0 linear-gradient(100deg, rgba(128, 124, 124, 0.8), rgba(128, 124, 124, 0.5), rgba(128, 124, 124, 0.8));
+}
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 40px 0 0 30px;
+    color: white;
+    text-shadow: 2px 3px 9px rgb(0, 0, 0);
+}
+span {
+    font-size:28px;
+    font-style: italic;
+    text-decoration: underline;
+}
+.logo {
+    border-radius: 50%;
+    height: 150px;
+    padding-top: 30px;
+}
+
+
+Members/Group Photo
+.group-photo {
+    margin: 20px 0 90px 0;
+    position: relative;
+    height: 150px; 
+    width: 457px;
+}
+.person {
+    position: absolute;
+}
+.person img {
+    width: 170px;
+    /* height: auto; */
+    object-fit: cover;
+}
+
+/* caption of the image/image names */
+.caption-catriz, .caption-joshua, .caption-revin, .caption-red, .caption-red1 {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+}
+.caption-catriz {
+    z-index: 1000;
+    font-weight: bold;
+    text-indent: 5px;
+}
+.caption-joshua {
+    position: absolute;
+    z-index: 100;
+    text-indent: 10px;
+    margin-top: 80px;
+    font-style: italic;
+}
+.caption-revin {
+    position: relative;
+    z-index: 100;
+    text-indent: 50px;
+    bottom: 85px;
+    font-style: italic;
+}
+.caption-red {
+    z-index: 100;
+    top: 78px;
+    text-indent: 125px;
+    position: relative;
+}
+.caption-red1 {
+    z-index: 100;
+    top: 72px;
+    text-indent: 99px;
+    position: relative;
+}
+
+
+/* Positioning and layering for each */
+/* Images */
+.catriz {
+    z-index: 4;
+    left: 58px;
+}
+.catrizimg {
+    margin-top: 40px;
+    height: 170px;
+    /* object-fit: cover; */
+} 
+.catrizimg:hover {
+    transform: scale(1.1);
+}
+.joshua {
+    z-index: 3;
+    left: 13px;
+}
+.revin {
+    z-index: 2;
+    left: 120px;
+    width: 180px;
+    padding: 0 40px 0 0 ;
+    height: 190px;
+}
+.red {
+    z-index: 1;
+    left: 45px;
+    bottom: 25px;
+}
+
+.joshua img, .revin img {
+    transform: scale(-1, 1); /*Mirror image*/
+}
+
+
+
+/* Container CSS */
+.container {
+    display: flex;
+    flex-direction: column ;
+}
+.container .pares-title {
+    padding: 40px 0 30px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Menu-Container CSS */
+.menu-title {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(0, 165, 22);
+    padding: 17px;
+}
+#pares-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 57px;
+    padding: 8px;
+}
+.toppings-options, .drinks-options {
+    padding: 8px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+}
+.imgItem, .imgToppings {
+    /* display: block; */
+    width: 250px;
+    height: 150px; 
+    /* object-fit: cover; */
+    padding: 3px;
+    border-radius: 50%;
+    margin: 9px;
+}
+.imgDrinks {
+    width: 250px;
+    height: 250px; 
+    padding: 3px;
+    border-radius: 50%;
+    margin: 9px;
+    mix-blend-mode: multiply;
+}
+.imgDrinks:hover {
+    transform: scale(1.1);
+}
+.imgItem:hover {
+    transform: scale(1.1);
+}
+.imgToppings:hover {
+    transform: scale(1.1);
+}
+.item-name {
+    text-align: center;
+    border-radius: 20px;
+}
+.item-name b {
+    font-size: 20px;
+    font-style: italic;
+}
+.item-name .price {
+    text-align: start;
+    margin: 0 0 0 35px;
+    padding: 2px 0 40px 0;
+}
+.item-name b:hover{
+    text-decoration: underline;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+input[type="radio"]:checked + label img { 
+    content: url(/images/check.png);/*changing image when clicked */
+    border: 2px solid #00ff1a;
+}
+input[type="checkbox"]:checked + label img { 
+    border: 2px solid #00ff1a;
+    content: url(/images/check.png);/*changing image when clicked */
+}
+
+
+
+
+.cart {
+    position: fixed;
+    text-align: center;
+    left: 0;
+    width: 100%;
+}
+.grand-total {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 18px;
+    position: sticky;
+    padding: 15px;    
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    background-color: rgb(0, 0, 0); 
+    text-align: center;
+}
+
+footer p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background: rgb(117, 117, 117);
+    padding: 40px;
+    position: sticky;
+    margin: 30px 0 0 0;
+}
+
+@media (min-width: 768px) and (max-width:1024px) {
+    header {
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+        border-image: fill 0 linear-gradient(100deg, rgba(143, 137, 137, 0.9), rgba(128, 124, 124, .8),transparent);
+    }
+    .title {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    span {
+        font-size:18px;
+    }
+    .logo {
+        height: 130px;
+        width: 100px;
+        filter: drop-shadow(10px 10px 20px rgb(0, 0, 0));
+    }
+    .member img {
+        width: 90px;
+        height: 130px;
+    }
+
+
+
+    .drinks-options {
+        grid-template-columns: repeat(2, 1fr); /* Create 3 equal columns */
+    }
+    .toppings-options {
+        grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    }
+    .imgItem, .imgToppings {
+        /* display: block; */
+        width: 190px;
+        height: 150px; 
+        /* object-fit: cover; */
+        padding: 3px;
+        border-radius: 50%;
+        margin: 9px;
+    }
+    .imgDrinks {
+        width: 250px;
+        height: 170px; 
+        padding: 3px;
+        border-radius: 50%;
+        margin: 9px;
+    }
+
+
+
+    .group-photo {
+        margin: 30px 0 90px 0;
+        position: relative;
+        height: 150px;
+        width: 250px;
+    }
+    .person {
+        position: absolute;
+    }
+    .person img {
+        width: 140px;
+        object-fit: cover;
+    }
+    .caption-red {
+
+        text-indent: 115px;
+        top: 69px;
+    }
+    .caption-red1 {
+        top: 65px;
+    }
+    .catrizimg {
+        margin-top: 40px;
+        height: 140px;
+    } 
+    .catrizimg:hover {
+        transform: scale(1.1);
+    }
+    .red {
+        bottom: 50px;
+    }
+    .joshua {
+        left: 30px;
+    }
+    .revin {
+        left: 105px;
+    }
+}
+
+@media (max-width: 768px ) {
+    header {
+        border-image: fill 0 linear-gradient(360deg, rgba(172, 167, 167, 0.9), transparent);
+        display: grid;
+        place-items: center;
+        justify-content: center;
+    }
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .logo {
+        /* visibility: hidden; */
+        position: absolute;
+        right: 85%;
+        top: -5%;
+        width: 90px;
+    }
+    .drinks-options {
+        grid-template-columns: repeat(2, 1fr); /* Create 3 equal columns */
+    }
+    .toppings-options {
+        grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    }
+    .imgItem, .imgToppings {
+        /* display: block; */
+        object-fit: cover;
+    }
+
+    .group-photo {
+        margin: 40px 0 80px 0;
+        position: relative;
+        height: 150px;
+        width: 250px;
+    }
+    .person {
+        position: absolute;
+    }
+    .person img {
+        width: 140px;
+        object-fit: cover;
+    }
+    .caption-red {
+        text-indent: 115px;
+        top: 69px;
+    }
+    .caption-red1 {
+        top: 65px;
+    }
+    .catrizimg {
+        margin-top: 40px;
+        height: 140px;
+    } 
+    .catrizimg:hover {
+        transform: scale(1.1);
+    }
+    .red {
+        bottom: 60px;
+    }
+    .joshua {
+        left: 30px;
+    }
+    .revin {
+        left: 105px;
+    }
+}
+
+@media (min-width: 469px ) and (max-width:767px) {
+    .title {
+        text-shadow: 2px 2px 2px Black;
+    }
+    .logo {
+        visibility: hidden;
+    }
+    #pares-options {
+        display: grid;
+        gap: 0px;
+        grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+    }
+    .drinks-options {
+        grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+    }
+    .toppings-options {
+        grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+    }
+    .imgDrinks {
+        width: 215px;
+    }
+}

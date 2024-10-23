@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pares FoodHouse</title>
+    
+    <link rel="stylesheet" href="pares.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="title"> <!-- Left Side-->
+            Adv. Front-End <br><span>Web Development</span> 
+        </div>
+    
+        <img class="logo" src="./images/logo.jpeg" alt="" width="150px"> 
+    
+        <div class="group-photo">
+            <div class="person catriz">
+                <img class="catrizimg" src="./images/Catriz.png" alt="Bernardo F. Catriz Jr.">
+                <p class="caption-catriz">Bernardo F. Catriz Jr.</p>
+            </div>
+            <div class="person joshua">
+                <p class="caption-joshua">Joshua L. <br> Espinoza</p>
+                <img class="joshuaimg" src="./images/Joshua.png" alt="Joshua L. Espinoza">
+
+            </div>
+            <div class="person revin">
+                <img class="revinimg" src="./images/Revin.png" alt="Revin King M. Lorena">
+                <p class="caption-revin">Revin King </p>
+                <p class="caption-revin">M. Lorena</p>
+            </div>
+            <div class="person red">
+                <p class="caption-red">Adrian Red S.</p>
+                <p class="caption-red1">Larioza</p>
+                <img class="redimg" src="./images/Red.png" alt="Adrian Red S. Larioza">
+            </div>
+        </div>
+        
+    </header>
+
+
+    <div class="container">
+        <h1 class="pares-title">Pares FoodHouse</h1>
+
+        <div class="menu-container">
+            <h3 class="menu-title">Select Pares</h3>
+            <div class="pares-options" id="pares-options">
+
+                <!-- Regular Pares -->
+                <div class="item">
+                    <input type="radio" name="pares" value="50" id="regular" onclick="clickpares()">
+                    <label for="regular">
+                        <img class="imgItem" id="regular-img" src="./images/paresRegular.png" alt="Pares Regular">
+                        <div class="item-name"><b>Pares Regular</b><br> 
+                            <p class="price">Php 50.00</p></div>
+                    </label>
+                </div>
+
+                <!-- Special Pares -->
+                <div class="item">
+                    <input type="radio" name="pares" value="70" id="special" onclick="clickpares()">
+                    <label for="special">
+                        <img class="imgItem" id="special-img" src="./images/paresSpecial.png" alt="Special Pares">
+                        <div class="item-name"><b>Pares Special</b><br> 
+                            <p class="price">Php 70.00</p></div>
+                    </label>
+                </div>
+
+                <!-- Overload Pares -->
+                <div class="item">
+                    <input type="radio" name="pares" value="90" id="overload" onclick="clickpares()">
+                    <label for="overload">
+                        <img class="imgItem" id="overload-img" src="./images/paresOverload.png" alt="Pares Overload">
+                        <div class="item-name"><b>Pares Overload</b><br> 
+                            <p class="price">Php 90.00</p></div>
+                    </label>
+                </div>
+            </div>
+
+
+            <h3 class="menu-title">Select Toppings</h3>
+            <div class="toppings-options">
+            
+                <!-- Shanghai Toppings -->
+                <div class="toppings">
+                    <input type="checkbox" name="paresToppings" value="15" id="shanghai" onclick="clickpares()">
+                    <label for="shanghai">
+                        <img class="imgToppings" src="./images/shanghai.png" alt="Shanghai">
+                        <div class="item-name"><b>Shanghai</b><br> 
+                            <p class="price">Php 15.00</p></div>
+                    </label>
+                </div>
+            
+                <!-- Siomai Toppings -->
+                <div class="toppings">
+                    <input type="checkbox" name="paresToppings" value="15" id="siomai" onclick="clickpares()">
+                    <label for="siomai">
+                        <img class="imgToppings" src="./images/siomai.png" alt="Siomai">
+                        <div class="item-name"><b>Siomai</b><br> 
+                            <p class="price">Php 15.00</p></div>
+                    </label>
+                </div>
+            
+                <!-- Chicken Skins Toppings -->
+                <div class="toppings">
+                    <input type="checkbox" name="paresToppings" value="20" id="chicken" onclick="clickpares()">
+                    <label for="chicken">
+                        <img class="imgToppings" src="./images/chickenSkin.png" alt="Chicken Skins">
+                        <div class="item-name"><b>Chicken Skins</b><br> 
+                            <p class="price">Php 20.00</p></div>
+                    </label>
+                </div>
+                
+                <!-- Chicharon Bulaklak Toppings -->
+                <div class="toppings">
+                    <input type="checkbox" name="paresToppings" value="10" id="chicharonBulaklak" onclick="clickpares()">
+                    <label for="chicharonBulaklak">
+                        <img class="imgToppings" src="./images/chicharonBulaklak.png" alt="Chicharon Bulaklak">
+                        <div class="item-name"><b>Chicharon Bulaklak</b><br> 
+                            <p class="price">Php 10.00</p></div>
+                    </label>
+                </div>
+
+                <!-- Chicharon Baboy Toppings -->
+                <div class="toppings">
+                    <input type="checkbox" name="paresToppings" value="10" id="chicharonBaboy" onclick="clickpares()">
+                    <label for="chicharonBaboy">
+                        <img class="imgToppings" src="./images/chicharonBaboy.png" alt="Chicharon Baboy">
+                        <div class="item-name"><b>Chicharon Baboy</b><br> 
+                            <p class="price">Php 10.00</p></div>
+                    </label>
+                </div>
+
+                <!-- EGG Toppings -->
+                <div class="toppings">
+                    <input type="checkbox" name="paresToppings" value="7" id="egg" onclick="clickpares()">
+                    <label for="egg">
+                        <img class="imgToppings" src="./images/Egg.png" alt="Egg">
+                        <div class="item-name"><b>Boiled Egg</b><br> 
+                            <p class="price">Php 7.00</p></div>
+                    </label>
+                </div>
+            </div>
+
+            <h3 class="menu-title">Select Drinks</h3>
+            <div class="drinks-options">
+                
+                <!-- Mt. Dew -->
+                <div class="drinks">
+                    <input type="radio" name="paresDrinks" value="20" id="dew" onclick="clickpares()">
+                    <label for="dew">
+                        <img class="imgDrinks" src="./images/dew.png" alt="Mt.Dew" id="img-dew">
+                        <div class="item-name"><b>Mt. Dew</b><br>
+                            <p class="price">Php 20.00</p></div>
+                    </label>
+                </div>
+            
+                <!-- Coke -->
+                <div class="drinks">
+                    <input type="radio" name="paresDrinks" value="15" id="coke" onclick="clickpares()">
+                    <label for="coke">
+                        <img class="imgDrinks" src="./images/coke.png" alt="Coke" id="img-coke">
+                        <div class="item-name"><b>Coke</b><br>
+                            <p class="price">Php 15.00</p></div>
+                    </label>
+                </div>
+            
+                <!-- Royal -->
+                <div class="drinks">
+                    <input type="radio" name="paresDrinks" value="15" id="royal" onclick="clickpares()">
+                    <label for="royal">
+                        <img class="imgDrinks" src="./images/royal.png" alt="Royal" id="img-royal">
+                        <div class="item-name"><b>Royal</b><br>
+                            <p class="price">Php 15.00</p></div>
+                    </label>
+                </div>
+            
+                <!-- Sprite -->
+                <div class="drinks">
+                    <input type="radio" name="paresDrinks" value="15" id="sprite" onclick="clickpares()">
+                    <label for="sprite">
+                        <img class="imgDrinks" src="./images/sprite.png" alt="Sprite" id="img-sprite">
+                        <div class="item-name"><b>Sprite</b><br>
+                            <p class="price">Php 15.00</p></div>
+                    </label>
+                </div>
+            
+                <!-- Sting -->
+                <div class="drinks">
+                    <input type="radio" name="paresDrinks" value="20" id="sting" onclick="clickpares()">
+                    <label for="sting">
+                        <img class="imgDrinks" src="./images/sting.png" alt="Sting" id="img-sting">
+                        <div class="item-name"><b>Sting</b><br>
+                            <p class="price">Php 20.00</p></div>
+                    </label>
+                </div>
+            </div>
+            
+            
+        <div class="cart"></div>
+            <p class="grand-total">Total:  <br> <span id="total">Php 0.00</span></p>
+        </div>
+
+    <footer>
+
+        <!-- instructor -->
+        <p>Mr. Jim-Mar Delos Reyes</p>
+    </footer>
+
+</body>
+</html>
